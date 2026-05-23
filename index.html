@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALTEX株式会社</title>
+  <style>
+    :root {
+      --main: #0f3d6e;
+      --dark: #0b1320;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f5f7fa;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.8;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--main);
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      font-size: 17px;
+      color: #111827;
+      margin-left: 6px;
+    }
+
+    .nav a {
+      color: #111827;
+      text-decoration: none;
+      margin-left: 26px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 430px;
+      background:
+        linear-gradient(rgba(8, 25, 48, .68), rgba(8, 25, 48, .68)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+
+    .hero h1 {
+      font-size: 54px;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      letter-spacing: 3px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 0 0 10px;
+      color: #e5e7eb;
+    }
+
+    .hero .sub {
+      font-size: 15px;
+      color: #d1d5db;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 54px 20px;
+    }
+
+    section {
+      background: var(--card);
+      padding: 38px;
+      margin-bottom: 32px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      padding-left: 14px;
+      border-left: 5px solid var(--main);
+      font-size: 26px;
+      color: #111827;
+    }
+
+    .message {
+      font-size: 16px;
+      color: #374151;
+      margin: 0;
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .service img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .service h3 {
+      font-size: 23px;
+      color: var(--main);
+      margin: 0 0 14px;
+    }
+
+    .service ul {
+      padding-left: 20px;
+      margin: 18px 0 0;
+    }
+
+    .service li {
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    th, td {
+      padding: 15px 12px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      width: 28%;
+      background: #f9fafb;
+      color: #4b5563;
+      font-weight: 600;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    .contact a {
+      color: var(--main);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #d1d5db;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        display: block;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin: 12px 18px 0 0;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .service {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 26px 20px;
+      }
+
+      th, td {
+        display: block;
+        width: 100%;
+      }
+
+      th {
+        border-bottom: none;
+        padding-bottom: 6px;
+      }
+
+      td {
+        padding-top: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">ALTEX<span>株式会社</span></div>
+    <nav>
+      <a href="#service">事業内容</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>ALTEX株式会社</h1>
+    <p>IT Solutions & Engineer Staffing</p>
+    <p class="sub">IT領域における人材支援・技術支援を通じて、企業の成長を支えます。</p>
+  </div>
+</div>
+
+<main>
+
+  <section>
+    <h2>企業理念</h2>
+    <p class="message">
+      ALTEX株式会社は、IT分野における専門性と実行力を活かし、
+      お客様の課題解決と事業成長を支援する企業です。
+      技術と人材をつなぎ、信頼されるパートナーとして持続的な価値を提供してまいります。
+    </p>
+  </section>
+
+  <section id="service">
+    <h2>事業内容</h2>
+    <div class="service">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="IT事業">
+      <div>
+        <h3>IT関連事業・技術者派遣</h3>
+        <p>
+          システム開発、業務支援、ITインフラ、運用保守など、
+          IT領域における技術者派遣および関連サービスを提供いたします。
+        </p>
+        <ul>
+          <li>ITエンジニア派遣・人材支援</li>
+          <li>システム開発支援</li>
+          <li>業務効率化・IT導入支援</li>
+          <li>運用保守・サポート業務</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="company">
+    <h2>会社概要</h2>
+    <table>
+      <tr>
+        <th>会社名</th>
+        <td>ALTEX株式会社</td>
+      </tr>
+      <tr>
+        <th>読み方</th>
+        <td>アルテックス株式会社</td>
+      </tr>
+      <tr>
+        <th>英文表記</th>
+        <td>ALTEX Co., Ltd.</td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>2026年4月3日</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>東京都〇〇区〇〇</td>
+      </tr>
+      <tr>
+        <th>代表者</th>
+        <td>〇〇 〇〇</td>
+      </tr>
+      <tr>
+        <th>事業内容</th>
+        <td>IT関連事業、技術者派遣事業、システム開発支援、IT導入支援</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>お問い合わせ</h2>
+    <p>お問い合わせは下記メールアドレスまでお願いいたします。</p>
+    <p><a href="mailto:info@altexglobal.jp">info@altexglobal.jp</a></p>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 ALTEX Co., Ltd. All Rights Reserved.
+</footer>
+
+</body>
+</html>
