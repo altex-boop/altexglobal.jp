@@ -3,71 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALTEX株式会社</title>
+  <title>ALTEX株式会社｜ITエンジニア派遣・IT支援</title>
+  <meta name="description" content="ALTEX株式会社は、ITエンジニア派遣、システム開発支援、IT導入支援、運用保守を通じて企業の成長を支援します。">
   <style>
     :root {
-      --main: #0f3d6e;
-      --dark: #0b1320;
+      --main: #8FA3B5;
+      --deep: #243447;
+      --dark: #0f172a;
       --text: #1f2937;
       --muted: #6b7280;
-      --bg: #f5f7fa;
+      --bg: #f6f8fb;
       --card: #ffffff;
+      --line: #e5e7eb;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Arial, sans-serif;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", Arial, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.8;
     }
 
+    a { color: inherit; }
+
     header {
-      background: #fff;
-      border-bottom: 1px solid #e5e7eb;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
       z-index: 10;
+      backdrop-filter: blur(8px);
     }
 
     .nav {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 16px 20px;
+      padding: 16px 22px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .logo {
-      font-size: 26px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 700;
-      color: var(--main);
       letter-spacing: 1px;
+      color: var(--deep);
     }
 
-    .logo span {
-      font-size: 17px;
-      color: #111827;
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #607789, #b8c7d2);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .brand-name {
+      font-size: 25px;
+    }
+
+    .brand-name span {
+      font-size: 15px;
       margin-left: 6px;
+      color: #374151;
+      letter-spacing: 0;
     }
 
-    .nav a {
-      color: #111827;
+    nav a {
       text-decoration: none;
-      margin-left: 26px;
+      margin-left: 28px;
       font-size: 14px;
+      color: #374151;
     }
+
+    nav a:hover { color: var(--deep); }
 
     .hero {
-      min-height: 430px;
+      min-height: 480px;
       background:
-        linear-gradient(rgba(8, 25, 48, .68), rgba(8, 25, 48, .68)),
-        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80");
+        linear-gradient(105deg, rgba(15,23,42,.86) 0%, rgba(36,52,71,.72) 45%, rgba(143,163,181,.40) 100%),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80");
       background-size: cover;
       background-position: center;
       color: white;
@@ -76,53 +101,69 @@
     }
 
     .hero-inner {
+      max-width: 1120px;
       width: 100%;
-      max-width: 1100px;
       margin: 0 auto;
-      padding: 70px 20px;
+      padding: 78px 22px;
+    }
+
+    .eyebrow {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #dbe4ea;
+      margin-bottom: 14px;
     }
 
     .hero h1 {
-      font-size: 54px;
-      line-height: 1.2;
-      margin: 0 0 20px;
-      letter-spacing: 3px;
+      font-size: clamp(40px, 6vw, 66px);
+      line-height: 1.12;
+      margin: 0 0 22px;
+      letter-spacing: 4px;
+      font-weight: 700;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 3vw, 32px);
+      margin: 0 0 16px;
+      font-weight: 600;
+      border: none;
+      padding: 0;
+      color: white;
     }
 
     .hero p {
-      font-size: 20px;
-      margin: 0 0 10px;
-      color: #e5e7eb;
-    }
-
-    .hero .sub {
-      font-size: 15px;
-      color: #d1d5db;
+      max-width: 680px;
+      margin: 0;
+      font-size: 16px;
+      color: #edf2f6;
     }
 
     main {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 54px 20px;
+      padding: 58px 22px;
     }
 
     section {
       background: var(--card);
-      padding: 38px;
-      margin-bottom: 32px;
-      border-radius: 14px;
-      box-shadow: 0 4px 18px rgba(0,0,0,.06);
+      padding: 42px;
+      margin-bottom: 34px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, .06);
+      border: 1px solid rgba(229,231,235,.8);
     }
 
     h2 {
-      margin: 0 0 24px;
-      padding-left: 14px;
+      margin: 0 0 26px;
+      padding-left: 15px;
       border-left: 5px solid var(--main);
       font-size: 26px;
       color: #111827;
+      letter-spacing: .04em;
     }
 
-    .message {
+    .lead {
       font-size: 16px;
       color: #374151;
       margin: 0;
@@ -130,43 +171,76 @@
 
     .service {
       display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 30px;
+      grid-template-columns: 1fr 1.08fr;
+      gap: 34px;
       align-items: center;
     }
 
     .service img {
       width: 100%;
-      height: 300px;
+      height: 330px;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 14px;
       display: block;
+      filter: saturate(.9);
     }
 
     .service h3 {
       font-size: 23px;
-      color: var(--main);
+      color: var(--deep);
       margin: 0 0 14px;
+    }
+
+    .service p {
+      margin: 0 0 18px;
+      color: #374151;
     }
 
     .service ul {
       padding-left: 20px;
-      margin: 18px 0 0;
+      margin: 0;
     }
 
-    .service li {
+    .service li { margin-bottom: 8px; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .feature {
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .feature strong {
+      display: block;
+      color: var(--deep);
+      font-size: 17px;
       margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #4b5563;
+      margin: 0;
+      font-size: 14px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       background: #fff;
+      overflow: hidden;
+      border-radius: 12px;
     }
 
     th, td {
-      padding: 15px 12px;
-      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 14px;
+      border-bottom: 1px solid var(--line);
       text-align: left;
       vertical-align: top;
     }
@@ -178,49 +252,64 @@
       font-weight: 600;
     }
 
+    tr:last-child th, tr:last-child td {
+      border-bottom: none;
+    }
+
     .contact {
       text-align: center;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.96), rgba(248,250,252,.96)),
+        url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80");
+      background-size: cover;
+      background-position: center;
     }
 
-    .contact p {
-      margin: 8px 0;
-    }
+    .contact p { margin: 8px 0; }
 
-    .contact a {
-      color: var(--main);
+    .mail {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--deep);
       font-weight: 700;
       text-decoration: none;
       font-size: 18px;
+      border-bottom: 1px solid var(--deep);
     }
 
     footer {
       background: var(--dark);
       color: #d1d5db;
       text-align: center;
-      padding: 28px 20px;
+      padding: 30px 20px;
       font-size: 13px;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 820px) {
       .nav {
         display: block;
       }
 
-      .nav a {
+      nav {
+        margin-top: 12px;
+      }
+
+      nav a {
         display: inline-block;
-        margin: 12px 18px 0 0;
+        margin: 0 18px 8px 0;
       }
 
-      .hero h1 {
-        font-size: 38px;
+      .hero {
+        min-height: 420px;
       }
 
-      .service {
+      .service,
+      .features {
         grid-template-columns: 1fr;
       }
 
       section {
-        padding: 26px 20px;
+        padding: 28px 20px;
       }
 
       th, td {
@@ -244,8 +333,12 @@
 
 <header>
   <div class="nav">
-    <div class="logo">ALTEX<span>株式会社</span></div>
+    <div class="brand">
+      <div class="brand-mark">A</div>
+      <div class="brand-name">ALTEX<span>株式会社</span></div>
+    </div>
     <nav>
+      <a href="#message">企業理念</a>
       <a href="#service">事業内容</a>
       <a href="#company">会社概要</a>
       <a href="#contact">お問い合わせ</a>
@@ -255,27 +348,46 @@
 
 <div class="hero">
   <div class="hero-inner">
+    <div class="eyebrow">IT Solutions & Engineer Staffing</div>
     <h1>ALTEX株式会社</h1>
-    <p>IT Solutions & Engineer Staffing</p>
-    <p class="sub">IT領域における人材支援・技術支援を通じて、企業の成長を支えます。</p>
+    <h2>技術と人材をつなぎ、企業の成長を支える。</h2>
+    <p>
+      ALTEX株式会社は、ITエンジニア派遣・システム開発支援・IT導入支援を中心に、
+      お客様の課題解決と事業推進をサポートいたします。
+    </p>
   </div>
 </div>
 
 <main>
 
-  <section>
+  <section id="message">
     <h2>企業理念</h2>
-    <p class="message">
+    <p class="lead">
       ALTEX株式会社は、IT分野における専門性と実行力を活かし、
       お客様の課題解決と事業成長を支援する企業です。
       技術と人材をつなぎ、信頼されるパートナーとして持続的な価値を提供してまいります。
     </p>
+
+    <div class="features">
+      <div class="feature">
+        <strong>Professional</strong>
+        <p>IT領域における専門知識と経験を活かし、実務に即した支援を行います。</p>
+      </div>
+      <div class="feature">
+        <strong>Reliable</strong>
+        <p>お客様との信頼関係を大切にし、安定したサービス提供を目指します。</p>
+      </div>
+      <div class="feature">
+        <strong>Execution</strong>
+        <p>提案だけでなく、現場で価値を実現する実行力を重視します。</p>
+      </div>
+    </div>
   </section>
 
   <section id="service">
     <h2>事業内容</h2>
     <div class="service">
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="IT事業">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80" alt="IT関連事業・技術者派遣">
       <div>
         <h3>IT関連事業・技術者派遣</h3>
         <p>
@@ -308,20 +420,26 @@
         <td>ALTEX Co., Ltd.</td>
       </tr>
       <tr>
+        <th>代表取締役</th>
+        <td>王 志剛</td>
+      </tr>
+      <tr>
         <th>設立</th>
         <td>2026年4月3日</td>
       </tr>
       <tr>
         <th>所在地</th>
-        <td>東京都〇〇区〇〇</td>
-      </tr>
-      <tr>
-        <th>代表者</th>
-        <td>〇〇 〇〇</td>
+        <td>〒104-0053<br>東京都中央区晴海3-13-1</td>
       </tr>
       <tr>
         <th>事業内容</th>
-        <td>IT関連事業、技術者派遣事業、システム開発支援、IT導入支援</td>
+        <td>
+          IT関連事業<br>
+          技術者派遣事業<br>
+          システム開発支援<br>
+          IT導入支援<br>
+          運用保守・サポート業務
+        </td>
       </tr>
     </table>
   </section>
@@ -329,7 +447,7 @@
   <section id="contact" class="contact">
     <h2>お問い合わせ</h2>
     <p>お問い合わせは下記メールアドレスまでお願いいたします。</p>
-    <p><a href="mailto:info@altexglobal.jp">info@altexglobal.jp</a></p>
+    <p><a class="mail" href="mailto:info@altexglobal.jp">info@altexglobal.jp</a></p>
   </section>
 
 </main>
